@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@layer base {
+  body {
+    @apply bg-[#040714] text-[#f9f9f9] font-quicksand scrollbar-hide;
+  }
+}
+
+@layer components {
+  .header {
+    @apply sticky bg-[#040714] top-0 z-[1000] flex h-[72px] items-center px-10 md:px-12;
+  }
+
+  /* Header component */
+  .login-btn {
+    @apply ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200;
+  }
+
+  .header-link {
+    @apply flex items-center space-x-2 cursor-pointer;
+  }
+
+  .span {
+    @apply relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100;
+  }
+
+  .brand {
+    @apply flex relative w-52 h-32 sm:w-64 sm:h-36 border-[3px] border-[#f9f9f9] border-opacity-10 rounded-lg cursor-pointer shadow-xl overflow-hidden  hover:border-opacity-80 hover:shadow-2xl transform hover:scale-105 transition duration-300;
+  }
+
+  /* Homepage component */
+  .main {
+    @apply relative min-h-screen after:bg-home after:bg-center after:bg-cover after:bg-no-repeat after:bg-fixed after:absolute after:inset-0 after:z-[-1];
+  }
+}
