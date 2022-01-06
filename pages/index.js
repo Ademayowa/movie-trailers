@@ -1,4 +1,4 @@
-import { BASE_URL } from './config/index';
+import { BASE_URL } from '../config/index';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
 import Slider from '@/components/Slider';

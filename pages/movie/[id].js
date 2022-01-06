@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 import { getSession, useSession } from 'next-auth/client';
 import Image from 'next/image';
-import { BASE_URL } from '../config/index';
+import { BASE_URL } from '../../config/index';
 import { PlusIcon, XIcon } from '@heroicons/react/solid';
 import ReactPlayer from 'react-player/lazy';
 

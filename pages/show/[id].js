@@ -1,6 +1,6 @@
 import { getSession, useSession } from 'next-auth/client';
 import Head from 'next/head';
-import { BASE_URL } from '../config/index';
+import { BASE_URL } from '../../config/index';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
