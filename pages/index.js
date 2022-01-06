@@ -5,8 +5,6 @@ import Brands from '@/components/Brands';
 import MoviesCollection from '@/components/MoviesCollection';
 import ShowCollection from '@/components/ShowCollection';
 
-const BASE_URL = 'https://api.themoviedb.org/3';
-
 export default function Home({
   popularMovies,
   popularShows,
@@ -28,6 +26,8 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
+  const BASE_URL = 'https://api.themoviedb.org/3';
+
   const [
     popularMoviesRes,
     popularShowsRes,

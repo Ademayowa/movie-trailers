@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 import { getSession, useSession } from 'next-auth/client';
@@ -16,11 +16,11 @@ export default function Movie({ result }) {
   const router = useRouter();
 
   // Change route path once a user logout
-  useEffect(() => {
-    if (!session) {
-      router.push('/');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!session) {
+  //     router.push('/');
+  //   }
+  // }, []);
 
   const index = result.videos.results.findIndex(
     (element) => element.type === 'Trailer'

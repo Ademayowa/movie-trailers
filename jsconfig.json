@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/config/*": ["config/*"]
+      "@/components/*": ["components/*"]
     }
   }
 }
