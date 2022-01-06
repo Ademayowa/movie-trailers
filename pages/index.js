@@ -1,10 +1,11 @@
-import { BASE_URL } from '../config/index';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
 import Slider from '@/components/Slider';
 import Brands from '@/components/Brands';
 import MoviesCollection from '@/components/MoviesCollection';
 import ShowCollection from '@/components/ShowCollection';
+
+const BASE_URL = 'https://api.themoviedb.org/3';
 
 export default function Home({
   popularMovies,

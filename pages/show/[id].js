@@ -1,6 +1,5 @@
 import { getSession, useSession } from 'next-auth/client';
 import Head from 'next/head';
-import { BASE_URL } from '../../config/index';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -12,6 +11,7 @@ import ReactPlayer from 'react-player/lazy';
 function Show({ result }) {
   const [session] = useSession();
   const BASE_URL_ONE = 'https://image.tmdb.org/t/p/original/';
+
   const router = useRouter();
   const [showPlayer, setShowPlayer] = useState(false);
 
@@ -136,6 +136,7 @@ export default Show;
 export async function getServerSideProps(context) {
   const session = await getSession(context);
   const { id } = context.query;
+  const BASE_URL = 'https://api.themoviedb.org/3';
 
   const request = await fetch(
     `${BASE_URL}/tv/${id}?api_key=${process.env.API_KEY}&language=en-US&append_to_response=videos`

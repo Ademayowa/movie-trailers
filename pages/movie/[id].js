@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 import { getSession, useSession } from 'next-auth/client';
 import Image from 'next/image';
-import { BASE_URL } from '../../config/index';
 import { PlusIcon, XIcon } from '@heroicons/react/solid';
 import ReactPlayer from 'react-player/lazy';
 
@@ -131,8 +130,7 @@ export default function Movie({ result }) {
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
-
-  const session = await getSession(context);
+  const BASE_URL = 'https://api.themoviedb.org/3';
 
   const res = await fetch(
     `${BASE_URL}/movie/${id}?api_key=${process.env.API_KEY}&language=en-US&append_to_response=videos`
@@ -141,7 +139,6 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      session,
       result,
     },
   };
