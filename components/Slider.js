@@ -7,7 +7,7 @@ export default function Slider() {
       <div />
 
       <Carousel
-        autoPlay
+        // autoPlay
         infiniteLoop
         showStatus={false}
         showIndicators={false}
@@ -15,25 +15,25 @@ export default function Slider() {
         interval={5000}
       >
         <div className='relative'>
-          <h1 className='text-sm sm:top-20 md:text-6xl font-bold absolute md:top-28 left-10 max-w-2xl px-5'>
+          <h1 className='text-lg md:text-6xl font-bold absolute md:top-28 left-10 max-w-2xl'>
             Watch the latest movie trialers, tv series and shows.
           </h1>
           <img loading='lazy' src='/images/slider-1.jpg' alt='' />
         </div>
         <div className='relative'>
-          <h1 className='text-sm sm:top-20 md:text-6xl font-bold absolute md:top-28 left-10 max-w-2xl px-5'>
+          <h1 className='text-lg sm:top-20 md:text-6xl font-bold absolute md:top-28 left-10 max-w-2xl'>
             Watch the latest movie trialers, tv series and shows.
           </h1>
           <img loading='lazy' src='/images/slider-2.jpg' alt='' />
         </div>
         <div className='relative'>
-          <h1 className='text-sm sm:top-20 md:text-6xl font-bold absolute md:top-28 left-10 max-w-2xl px-5'>
+          <h1 className='text-lg sm:top-20 md:text-6xl font-bold absolute md:top-28 left-10 max-w-2xl'>
             Watch the latest movie trialers, tv series and shows.
           </h1>
           <img loading='lazy' src='/images/slider-3.jpg' alt='' />
         </div>
         <div className='relative'>
-          <h1 className='text-sm sm:top-20 md:text-6xl font-bold absolute md:top-28 left-10 max-w-2xl px-5'>
+          <h1 className='text-lg sm:top-20 md:text-6xl font-bold absolute md:top-28 left-10 max-w-2xl'>
             Watch the latest movie trialers, tv series and shows.
           </h1>
           <img loading='lazy' src='/images/slider-4.jpg' alt='' />

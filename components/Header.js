@@ -21,7 +21,7 @@ export default function Header() {
         onClick={() => router.push('/')}
       />
 
-      <div className='ml-auto flex items-center space-x-6'>
+      <div className='ml-auto flex items-center space-x-4'>
         <a className='header-link group' onClick={() => router.push('/')}>
           <HomeIcon className='h-4' />
           <span className='span'>Home</span>
