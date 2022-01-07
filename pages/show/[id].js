@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
-import Hero from '../../components/Hero';
 import {
   BookmarkIcon,
   StarIcon,

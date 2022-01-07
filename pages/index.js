@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
 import Slider from '@/components/Slider';
-import Brands from '@/components/Brands';
 import MoviesCollection from '@/components/MoviesCollection';
 import ShowCollection from '@/components/ShowCollection';
 
@@ -15,7 +14,6 @@ export default function Home({
     <Layout title='Watch the best Movie Trailers'>
       <main className='main'>
         <Slider />
-        {/* <Brands /> */}
         <MoviesCollection results={popularMovies} title='Popular Movies' />
         <ShowCollection results={popularShows} title='Popular Shows' />
         <MoviesCollection results={top_ratedMovies} title='Top Rated Movies' />

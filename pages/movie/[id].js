@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import {
-  PlusIcon,
   XIcon,
   ViewListIcon,
   BookmarkIcon,
@@ -36,20 +35,11 @@ export default function Movie({ result }) {
         </div>
 
         <div className='absolute inset-y-28 md:inset-y-auto md:bottom-20 inset-x-4 md:inset-x-12 space-y-6 z-50'>
-          <h1 className='text-3xl sm:text-4xl md:text-5xl'>
+          <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>
             {result.title || result.original_name}
           </h1>
 
           <div className='flex items-center space-x-4'>
-            {/* <button className='text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]'>
-              <img
-                className='h-6 md:h-8'
-                src='/images/play-icon-black.svg'
-                alt=''
-              />
-              <span className='uppercase font-medium tracking-wide'>Play</span>
-            </button> */}
-
             <button
               className='text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#091725] cursor-pointer'
               onClick={() => setShowPlayer(true)}
