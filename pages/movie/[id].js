@@ -2,7 +2,13 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import { PlusIcon, XIcon } from '@heroicons/react/solid';
+import {
+  PlusIcon,
+  XIcon,
+  ViewListIcon,
+  BookmarkIcon,
+  StarIcon,
+} from '@heroicons/react/solid';
 import ReactPlayer from 'react-player/lazy';
 
 export default function Movie({ result }) {
@@ -30,22 +36,22 @@ export default function Movie({ result }) {
         </div>
 
         <div className='absolute inset-y-28 md:inset-y-auto md:bottom-20 inset-x-4 md:inset-x-12 space-y-6 z-50'>
-          <h2 className='text-3xl sm:text-4xl md:text-5xl'>
+          <h1 className='text-3xl sm:text-4xl md:text-5xl'>
             {result.title || result.original_name}
-          </h2>
+          </h1>
 
-          <div className='flex items-center space-x-3 md:space-x-5'>
-            <button className='text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]'>
+          <div className='flex items-center space-x-4'>
+            {/* <button className='text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]'>
               <img
                 className='h-6 md:h-8'
                 src='/images/play-icon-black.svg'
                 alt=''
               />
               <span className='uppercase font-medium tracking-wide'>Play</span>
-            </button>
+            </button> */}
 
             <button
-              className='text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]'
+              className='text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#091725] cursor-pointer'
               onClick={() => setShowPlayer(true)}
             >
               <img
@@ -54,16 +60,20 @@ export default function Movie({ result }) {
                 className='h-6 md:h-8'
               />
               <span className='uppercase font-medium tracking-wide'>
-                Trailer
+                Play Trailer
               </span>
             </button>
 
-            <div className='rounded-full border-2 border-white flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60'>
-              <PlusIcon className='h-6' />
+            <div className='rounded-full flex items-center justify-center w-11 h-11 cursor-pointer bg-[#091725]'>
+              <ViewListIcon className='h-6' />
             </div>
 
-            <div className='rounded-full border-2 border-white flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60'>
-              <img src='/images/group-icon.svg' alt='group' />
+            <div className='rounded-full flex items-center justify-center w-11 h-11 cursor-pointer bg-[#091725]'>
+              <BookmarkIcon className='h-6' />
+            </div>
+
+            <div className='rounded-full flex items-center justify-center w-11 h-11 cursor-pointer bg-[#091725]'>
+              <StarIcon className='h-6' />
             </div>
           </div>
 

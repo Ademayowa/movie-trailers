@@ -15,7 +15,7 @@ export default function Home({
     <Layout title='Watch the best Movie Trailers'>
       <main className='main'>
         <Slider />
-        <Brands />
+        {/* <Brands /> */}
         <MoviesCollection results={popularMovies} title='Popular Movies' />
         <ShowCollection results={popularShows} title='Popular Shows' />
         <MoviesCollection results={top_ratedMovies} title='Top Rated Movies' />

@@ -4,7 +4,12 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
-import { PlusIcon, XIcon } from '@heroicons/react/solid';
+import {
+  BookmarkIcon,
+  StarIcon,
+  ViewListIcon,
+  XIcon,
+} from '@heroicons/react/solid';
 import ReactPlayer from 'react-player/lazy';
 import Layout from '@/components/Layout';
 
@@ -35,18 +40,10 @@ function Show({ result }) {
           <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>
             {result.title || result.original_name}
           </h1>
-          <div className='flex items-center space-x-3 md:space-x-5'>
-            <button className='text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]'>
-              <img
-                src='/images/play-icon-black.svg'
-                alt=''
-                className='h-6 md:h-8'
-              />
-              <span className='uppercase font-medium tracking-wide'>Play</span>
-            </button>
 
+          <div className='flex items-center space-x-4'>
             <button
-              className='text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]'
+              className='text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#091725] cursor-pointer'
               onClick={() => setShowPlayer(true)}
             >
               <img
@@ -55,16 +52,20 @@ function Show({ result }) {
                 className='h-6 md:h-8'
               />
               <span className='uppercase font-medium tracking-wide'>
-                Trailer
+                Play Trailer
               </span>
             </button>
 
-            <div className='rounded-full border-2 border-white flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60'>
-              <PlusIcon className='h-6' />
+            <div className='rounded-full flex items-center justify-center w-11 h-11 cursor-pointer bg-[#091725]'>
+              <ViewListIcon className='h-6' />
             </div>
 
-            <div className='rounded-full border-2 border-white flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60'>
-              <img src='/images/group-icon.svg' alt='' />
+            <div className='rounded-full flex items-center justify-center w-11 h-11 cursor-pointer bg-[#091725]'>
+              <BookmarkIcon className='h-6' />
+            </div>
+
+            <div className='rounded-full flex items-center justify-center w-11 h-11 cursor-pointer bg-[#091725]'>
+              <StarIcon className='h-6' />
             </div>
           </div>
 
