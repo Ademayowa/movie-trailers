@@ -13,6 +13,7 @@ export default function Layout({ title, description, keywords, children }) {
 
       <Header />
       {children}
+      <footer className='text-white p-4 text-center'>TMBD API</footer>
     </>
   );
 }

@@ -25,7 +25,7 @@ function Show({ result }) {
   return (
     <Layout className='relative'>
       <section className='relative z-50'>
-        <div className='relative min-h-[calc(100vh-72px)]'>
+        <div className='relative min-h-[calc(100vh-72px)] max-h-full'>
           <Image
             src={
               `${BASE_URL_ONE}${result.backdrop_path || result.poster_path}` ||
@@ -51,7 +51,7 @@ function Show({ result }) {
                 className='h-6 md:h-8'
               />
               <span className='uppercase font-medium tracking-wide'>
-                Play Trailer
+                Trailer
               </span>
             </button>
 

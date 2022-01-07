@@ -23,7 +23,7 @@ export default function Movie({ result }) {
   return (
     <Layout title={result.title || result.original_name}>
       <section className='relative z-50'>
-        <div className='relative min-h-[calc(100vh-72px)]'>
+        <div className='relative min-h-[calc(100vh-72px)] max-h-full'>
           <Image
             src={
               `${BASE_URL_ONE}${result.backdrop_path || result.poster_path}` ||
@@ -50,7 +50,7 @@ export default function Movie({ result }) {
                 className='h-6 md:h-8'
               />
               <span className='uppercase font-medium tracking-wide'>
-                Play Trailer
+                Trailer
               </span>
             </button>
 
