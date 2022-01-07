@@ -19,6 +19,7 @@ export default function Home({
         <MoviesCollection results={top_ratedMovies} title='Top Rated Movies' />
         <ShowCollection results={top_ratedShows} title='Top Rated Shows' />
       </main>
+      <footer className='text-white p-4 text-center'>TMBD API</footer>
     </Layout>
   );
 }

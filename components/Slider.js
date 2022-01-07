@@ -7,7 +7,7 @@ export default function Slider() {
       <div />
 
       <Carousel
-        // autoPlay
+        autoPlay
         infiniteLoop
         showStatus={false}
         showIndicators={false}

@@ -23,7 +23,7 @@ export default function Movie({ result }) {
   return (
     <Layout title={result.title || result.original_name}>
       <section className='relative z-50'>
-        <div className='relative min-h-[calc(100vh-72px)] max-h-full'>
+        <div className='relative min-h-[calc(100vh-72px)] max-h-screen'>
           <Image
             src={
               `${BASE_URL_ONE}${result.backdrop_path || result.poster_path}` ||
@@ -72,7 +72,11 @@ export default function Movie({ result }) {
             {Math.floor(result.runtime / 60)}h {result.runtime % 60}m •{' '}
             {result.genres.map((genre) => genre.name + ' ')}{' '}
           </p>
-          <h4 className='text-sm md:text-lg max-w-4xl'>{result.overview}</h4>
+          <h4 className='text-sm md:text-lg max-w-4xl'>
+            {result.overview.length > 180
+              ? result.overview.substring(0, 210) + '...'
+              : result.overview}
+          </h4>
         </div>
 
         {/* Bg Overlay */}
